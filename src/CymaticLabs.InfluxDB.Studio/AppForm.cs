@@ -1891,6 +1891,7 @@ namespace CymaticLabs.InfluxDB.Studio
                 var dbName = dbNames.First();
 
                 //Add RetentionPolicies
+                dbName = "\"" + dbName + "\"";
                 var retentionPolicies = await client.GetRetentionPoliciesAsync(dbName);
                 //retentionPolicies = await client.GetReten
 
